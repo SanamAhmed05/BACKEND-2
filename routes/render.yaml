@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: video-downloader
+    env: python
+    buildCommand: pip install -r video_downloader/requirements.txt
+    startCommand: python video_downloader/src/main.py
+    envVars:
+      - key: FLASK_ENV
+        value: production
+
