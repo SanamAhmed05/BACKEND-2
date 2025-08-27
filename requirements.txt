@@ -14,4 +14,4 @@ yt-dlp==2025.7.21
 google-auth
 google-auth-oauthlib
 tarsafe
-gunicorn==22.1.0
+gunicorn
