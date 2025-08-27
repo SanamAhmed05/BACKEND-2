@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VideoGrab - Download Videos Instantly</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-play-circle"></i>
+                <span>VideoGrab</span>
+            </div>
+            <nav class="nav">
+                <a href="#features">Features</a>
+                
+
+                <!-- <a href="#how-it-works">How it Works</a>
+                <a href="#about">About</a>
+            </nav> -->
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Download Videos
+                    <span class="gradient-text">Instantly</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Paste any video URL and download high-quality videos from your favorite platforms. 
+                    Fast, free, and secure.
+                </p>
+                
+                <!-- URL Input Section -->
+                <div class="url-input-container">
+                    <div class="input-wrapper">
+                        <i class="fas fa-link input-icon"></i>
+                        <input 
+                            type="url" 
+                            id="videoUrl" 
+                            placeholder="Paste your video URL here..."
+                            class="url-input"
+                        >
+                        <button id="downloadBtn" class="download-btn">
+                            <i class="fas fa-download"></i>
+                            <span>Download</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Loading State -->
+                <div id="loadingState" class="loading-state hidden">
+                    <div class="spinner"></div>
+                    <p>Processing your video...</p>
+                </div>
+
+                <!-- Error State -->
+                <div id="errorState" class="error-state hidden">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <p id="errorMessage">Something went wrong. Please try again.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Info Section -->
+        <section id="videoInfoSection" class="video-info-section hidden">
+            <div class="video-card">
+                <div class="video-thumbnail">
+                    <img id="videoThumbnail" src="" alt="Video thumbnail">
+                    <div class="play-overlay">
+                        <i class="fas fa-play"></i>
+                    </div>
+                </div>
+                <div class="video-details">
+                    <h3 id="videoTitle">Video Title</h3>
+                    <div class="video-meta">
+                        <span id="videoUploader">Uploader</span>
+                        <span id="videoDuration">Duration</span>
+                        <span id="videoViews">Views</span>
+                    </div>
+                    <div class="format-selection">
+                        <label for="formatSelect">Choose Quality:</label>
+                        <select id="formatSelect" class="format-select">
+                            <option value="best">Best Quality</option>
+                        </select>
+                    </div>
+                    <div class="action-buttons">
+                        <button id="playBtn" class="play-btn">
+                            <i class="fas fa-play"></i>
+                            Play Video
+                        </button>
+                        <button id="confirmDownloadBtn" class="confirm-download-btn">
+                            <i class="fas fa-download"></i>
+                            Download Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Player Section -->
+        <section id="videoPlayerSection" class="video-player-section hidden">
+            <div class="player-container">
+                <video id="videoPlayer" controls>
+                    <source src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="player-controls">
+                    <button id="closePlayerBtn" class="close-player-btn">
+                        <i class="fas fa-times"></i>
+                        Close Player
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <h2>Why Choose VideoGrab?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Lightning Fast</h3>
+                    <p>Download videos in seconds with our optimized processing engine.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-hd-video"></i>
+                    </div>
+                    <h3>High Quality</h3>
+                    <p>Choose from multiple quality options including HD and 4K when available.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure & Private</h3>
+                    <p>Your downloads are processed securely with no data stored on our servers.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Friendly</h3>
+                    <p>Works perfectly on all devices - desktop, tablet, and mobile.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-play-circle"></i>
+                    <span>VideoGrab</span>
+                </div>
+                <p>&copy; 2025 VideoGrab. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script_enhanced.js"></script>
+</body>
+</html>
